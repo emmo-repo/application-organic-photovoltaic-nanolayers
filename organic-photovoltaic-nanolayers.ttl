@@ -157,26 +157,49 @@ foaf:page rdf:type owl:AnnotationProperty .
                                          owl:onProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d ;
                                          owl:someValuesFrom :AFMMeasurementProcess
                                        ] ;
-                       skos:prefLabel "AFMCalibrationProcess" .
+                       skos:prefLabel "AFMCalibrationProcess" ;
+                       emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Scanning reference samples for calibration of the X-Y-Z motion+"@en .
 
 
 ###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#AFMDataPostProcessing
 :AFMDataPostProcessing rdf:type owl:Class ;
-                       rdfs:subClassOf chameo:DataPostProcessing ;
-                       skos:prefLabel "AFMDataPostProcessing" .
+                       rdfs:subClassOf chameo:DataPostProcessing ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d ;
+                                         owl:someValuesFrom :SECalibration
+                                       ] ;
+                       skos:prefLabel "AFMDataPostProcessing" ;
+                       emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Calculation of properties values, Surface Profiles from image analysis"@en .
 
 
 ###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#AFMMeasurementProcess
 :AFMMeasurementProcess rdf:type owl:Class ;
                        rdfs:subClassOf chameo:AtomicForceMicroscopy ,
-                                       chameo:CharacterisationMeasurementProcess ;
-                       skos:prefLabel "AFMMeasurementProcess" .
+                                       chameo:CharacterisationMeasurementProcess ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d ;
+                                         owl:someValuesFrom :AFMRawDataConversion
+                                       ] ;
+                       skos:prefLabel "AFMMeasurementProcess" ;
+                       emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Surface roughness measurements"@en .
 
 
 ###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#AFMRawDataConversion
 :AFMRawDataConversion rdf:type owl:Class ;
-                      rdfs:subClassOf chameo:DataPreparation ;
-                      skos:prefLabel "AFMRawDataConversion" .
+                      rdfs:subClassOf chameo:DataPreparation ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d ;
+                                        owl:someValuesFrom :AFMDataPostProcessing
+                                      ] ;
+                      skos:prefLabel "AFMRawDataConversion" ;
+                      emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Raw data conversion Image – Image Analysis"@en .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#BulkCSI
+:BulkCSI rdf:type owl:Class ;
+         rdfs:subClassOf chameo:ReferenceSample ;
+         owl:disjointWith :OPNReferenceSample ;
+         skos:prefLabel "BulkCSI" .
 
 
 ###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#CutByScissors
@@ -197,48 +220,98 @@ foaf:page rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#LevellingForInclinations
 :LevellingForInclinations rdf:type owl:Class ;
-                          rdfs:subClassOf chameo:SampleInspection ;
-                          skos:prefLabel "LevellingForInclinations" .
+                          rdfs:subClassOf chameo:SampleInspection ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d ;
+                                            owl:someValuesFrom :LevellingForOptimalPosition
+                                          ] ;
+                          skos:prefLabel "LevellingForInclinations" ;
+                          emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Check if the sample is flat or has inclinations"@en .
 
 
 ###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#LevellingForOptimalPosition
 :LevellingForOptimalPosition rdf:type owl:Class ;
-                             rdfs:subClassOf chameo:SampleInspection ;
-                             skos:prefLabel "LevellingForOptimalPosition" .
+                             rdfs:subClassOf chameo:SampleInspection ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d ;
+                                               owl:someValuesFrom :AFMCalibrationProcess
+                                             ] ;
+                             skos:prefLabel "LevellingForOptimalPosition" ;
+                             emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Determine the optimal position of the sample for the highest intensity of light"@en .
 
 
 ###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#MountingOnHolder
 :MountingOnHolder rdf:type owl:Class ;
-                  rdfs:subClassOf chameo:Mounting ;
+                  rdfs:subClassOf chameo:Mounting ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d ;
+                                    owl:someValuesFrom :LevellingForInclinations
+                                  ] ;
                   skos:prefLabel "MountingOnHolder" .
 
 
 ###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#NanoindentationDataPostProcessing
 :NanoindentationDataPostProcessing rdf:type owl:Class ;
-                                   rdfs:subClassOf chameo:DataPostProcessing .
+                                   rdfs:subClassOf chameo:DataPostProcessing ;
+                                   skos:prefLabel "NanoindentationDataPostProcessing" ;
+                                   emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Calculation of properties values"@en .
 
 
 ###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#NanoindentationRawDataConversion
 :NanoindentationRawDataConversion rdf:type owl:Class ;
-                                  rdfs:subClassOf chameo:DataPreparation .
+                                  rdfs:subClassOf chameo:DataPreparation ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d ;
+                                                    owl:someValuesFrom :NanoindentationDataPostProcessing
+                                                  ] ;
+                                  skos:prefLabel "NanoindentationRawDataConversion"@en ;
+                                  emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Raw data conversion to Load – Displacement data, Analysis of the Loading, Unloading and Hold segments based on available models"@en .
 
 
 ###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#OPNNanoindentationCalibrationProcess
 :OPNNanoindentationCalibrationProcess rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/emmo/domain/nanoindentation#EMMO_b7264717-216e-46c6-9bf1-b17009a358c2> ;
-                                      skos:prefLabel "OPNNanoindentationCalibrationProcess" .
+                                      rdfs:subClassOf <https://w3id.org/emmo/domain/nanoindentation#EMMO_b7264717-216e-46c6-9bf1-b17009a358c2> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d ;
+                                                        owl:someValuesFrom :OPNNanoindentationMeasurementProcess
+                                                      ] ;
+                                      skos:prefLabel "OPNNanoindentationCalibrationProcess" ;
+                                      emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 """Calibrating the nanoindenter through a sequence of: 
+    -Microscope to indenter calibration 
+    -Tip area function 
+    -Compliance calibration 
+    -Continuous stiffness measurement""" .
 
 
 ###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#OPNNanoindentationMeasurementProcess
 :OPNNanoindentationMeasurementProcess rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/emmo/domain/nanoindentation#EMMO_b3111cf6-107c-4aa6-8f3c-936348906200> ;
-                                      skos:prefLabel "OPNNanoindentationMeasurementProcess" .
+                                      rdfs:subClassOf <https://w3id.org/emmo/domain/nanoindentation#EMMO_b3111cf6-107c-4aa6-8f3c-936348906200> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d ;
+                                                        owl:someValuesFrom :NanoindentationRawDataConversion
+                                                      ] ;
+                                      skos:prefLabel "OPNNanoindentationMeasurementProcess" ;
+                                      emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Measure mechanical properties (elastic modules, hardness) of the Organic Photovoltaic Nanolayered material."@en .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#OPNReferenceSample
+:OPNReferenceSample rdf:type owl:Class ;
+                    rdfs:subClassOf chameo:ReferenceSample ;
+                    skos:prefLabel "OPNReferenceSample" ;
+                    emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Calibration gratings for lateral and vertical calibration (samples with surface steps with specific width and height, respectively)"@en .
 
 
 ###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#OrganicPhotovoltaicMaterial
 :OrganicPhotovoltaicMaterial rdf:type owl:Class ;
                              rdfs:subClassOf chameo:Sample ;
-                             skos:prefLabel "OrganicPhotovoltaicMaterial" .
+                             skos:prefLabel "OrganicPhotovoltaicMaterial" ;
+                             emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 """Thin films unencapsulated (layers), encapsulated(devices) 
+Layer1: Polymer PET 
+Layer2: IMI 
+Layer3: SnO2 (Tin Oxide) 
+Layer4:  Active Layer 
+Layer5:  PEDOT:PSS"""@en ;
+                             emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f "Organic photovoltaic multi-nanolayers"@en .
 
 
 ###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#OrganicPhotovoltaicNanolayersCharacterisationWorkflow
@@ -318,26 +391,46 @@ foaf:page rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#SECalibration
 :SECalibration rdf:type owl:Class ;
-               rdfs:subClassOf chameo:CalibrationProcess ;
+               rdfs:subClassOf chameo:CalibrationProcess ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d ;
+                                 owl:someValuesFrom :SEMeasurementProcess
+                               ] ;
                skos:prefLabel "SECalibrationProcess" .
 
 
 ###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#SEDataProcessingForHarmonic
 :SEDataProcessingForHarmonic rdf:type owl:Class ;
-                             rdfs:subClassOf chameo:DataPostProcessing ;
-                             skos:prefLabel "SEDataProcessingForHarmonic" .
+                             rdfs:subClassOf chameo:DataPostProcessing ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d ;
+                                               owl:someValuesFrom :SEDataProcessingForOpticalAndStructure
+                                             ] ;
+                             skos:prefLabel "SEDataProcessingForHarmonic" ;
+                             emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Harmonic analysis of the signal to extract measured Is,Ic"@en .
 
 
 ###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#SEDataProcessingForOpticalAndStructure
 :SEDataProcessingForOpticalAndStructure rdf:type owl:Class ;
-                                        rdfs:subClassOf chameo:DataPostProcessing ;
-                                        skos:prefLabel "SEDataProcessingForOpticalAndStructure" .
+                                        rdfs:subClassOf chameo:DataPostProcessing ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d ;
+                                                          owl:someValuesFrom :OPNNanoindentationCalibrationProcess
+                                                        ] ;
+                                        skos:prefLabel "SEDataProcessingForOpticalAndStructure" ;
+                                        emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Τheoretical optical model of the materials and layer structure of the sample"@en .
 
 
 ###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#SEMeasurementProcess
 :SEMeasurementProcess rdf:type owl:Class ;
-                      rdfs:subClassOf chameo:CharacterisationMeasurementProcess ;
-                      skos:prefLabel "SEMeasurementProcess" .
+                      rdfs:subClassOf chameo:CharacterisationMeasurementProcess ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d ;
+                                        owl:someValuesFrom :SEDataProcessingForHarmonic
+                                      ] ;
+                      skos:prefLabel "SEMeasurementProcess" ;
+                      emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Measure layer thickness and optical properties in the spectral range nIR-ViS-UV"@en ;
+                      emmo:EMMO_c7b62dd7_063a_4c2a_8504_42f7264ba83f "Spectroscopic Ellipsometry in  nIR-ViS-UV"@en .
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
