@@ -3,118 +3,123 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix emmo: <https://w3id.org/emmo#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix chameo: <https://w3id.org/emmo/domain/characterisation-methodology/chameo#> .
-@base <https://w3id.org/emmo/application/organic-photovoltaic-nanolayers> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@base <https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#> .
 
 <https://w3id.org/emmo/application/organic-photovoltaic-nanolayers> rdf:type owl:Ontology ;
-                                                                            owl:imports <https://w3id.org/emmo/domain/nanoindentation> ;
-                                                                            <http://purl.org/dc/terms/abstract> "Application ontology for Organic Photovoltaic Nanolayers testing developed within the NanoMECommons project."@en ;
-                                                                            <http://purl.org/dc/terms/alternative> "OrPhoNano" ;
-                                                                            <http://purl.org/dc/terms/bibliographicCitation> "Work under review - not available yet" ;
-                                                                            <http://purl.org/dc/terms/contributor> "Goldbeck Consulting Ltd (UK)" ;
-                                                                            <http://purl.org/dc/terms/created> "2024-11-12" ;
-                                                                            <http://purl.org/dc/terms/creator> "Gerhard Goldbeck" ,
-                                                                                                               "Pierluigi Del Nostro" ;
-                                                                            <http://purl.org/dc/terms/description> "Organic Photovoltaic Nanolayers testing ontology"@en ;
-                                                                            <http://purl.org/dc/terms/hasFormat> <https://www.w3.org/TR/turtle/> ;
-                                                                            <http://purl.org/dc/terms/identifier> "https://w3id.org/emmo/application/organic-photovoltaic-nanolayers" ;
-                                                                            <http://purl.org/dc/terms/issued> "" ;
-                                                                            <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/legalcode" ;
-                                                                            <http://purl.org/dc/terms/modified> "2023-10-23T15:00:00Z" ;
-                                                                            <http://purl.org/dc/terms/publisher> "EMMC ASBL" ;
-                                                                            <http://purl.org/dc/terms/source> "" ;
-                                                                            <http://purl.org/dc/terms/title> "Organic Photovoltaic Nanolayers testing ontology"@en ;
-                                                                            <http://purl.org/ontology/bibo/doi> "" ;
-                                                                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "orphonano"@en ;
-                                                                            <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/emmo/application/organic-photovoltaic-nanolayers" ;
-                                                                            rdfs:comment """Contacts:
+                                                                     owl:imports <https://w3id.org/emmo/domain/nanoindentation> ;
+                                                                     dcterms:abstract "Application ontology for Organic Photovoltaic Nanolayers testing developed within the NanoMECommons project."@en ;
+                                                                     dcterms:alternative "OrPhoNano" ;
+                                                                     dcterms:bibliographicCitation "Work under review - not available yet" ;
+                                                                     dcterms:contributor "Goldbeck Consulting Ltd (UK)" ;
+                                                                     dcterms:created "2024-11-12" ;
+                                                                     dcterms:creator "Gerhard Goldbeck" ,
+                                                                                     "Pierluigi Del Nostro" ;
+                                                                     dcterms:description "Organic Photovoltaic Nanolayers testing ontology"@en ;
+                                                                     dcterms:hasFormat <https://www.w3.org/TR/turtle/> ;
+                                                                     dcterms:identifier "https://w3id.org/emmo/application/organic-photovoltaic-nanolayers" ;
+                                                                     dcterms:issued "" ;
+                                                                     dcterms:license "https://creativecommons.org/licenses/by/4.0/legalcode" ;
+                                                                     dcterms:modified "2023-10-23T15:00:00Z" ;
+                                                                     dcterms:publisher "EMMC ASBL" ;
+                                                                     dcterms:source "" ;
+                                                                     dcterms:title "Organic Photovoltaic Nanolayers testing ontology"@en ;
+                                                                     bibo:doi "" ;
+                                                                     vann:preferredNamespacePrefix "orphonano"@en ;
+                                                                     vann:preferredNamespaceUri "https://w3id.org/emmo/application/organic-photovoltaic-nanolayers" ;
+                                                                     rdfs:comment """Contacts:
 													                            Gerhard Goldbeck
 													                            Goldbeck Consulting Ltd (UK)
 													                            email: gerhard@goldbeck-consulting.com"""@en ;
-                                                                            owl:backwardCompatibleWith "" ;
-                                                                            owl:priorVersion "" ;
-                                                                            owl:versionInfo "0.1.0" ;
-                                                                            skos:hiddenLabel "Organic Photovoltaic Nanolayers testing ontology" ;
-                                                                            <http://xmlns.com/foaf/0.1/homepage> <https://github.com/emmo-repo/application-organic-photovoltaic-nanolayers> ;
-                                                                            <http://xmlns.com/foaf/0.1/page> <https://github.com/emmo-repo/application-organic-photovoltaic-nanolayers> .
+                                                                     owl:backwardCompatibleWith "" ;
+                                                                     owl:priorVersion "" ;
+                                                                     owl:versionInfo "0.1.0" ;
+                                                                     skos:hiddenLabel "Organic Photovoltaic Nanolayers testing ontology" ;
+                                                                     foaf:homepage <https://github.com/emmo-repo/application-organic-photovoltaic-nanolayers> ;
+                                                                     foaf:page <https://github.com/emmo-repo/application-organic-photovoltaic-nanolayers> .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
 ###  http://purl.org/dc/terms/abstract
-<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+dcterms:abstract rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/alternative
-<http://purl.org/dc/terms/alternative> rdf:type owl:AnnotationProperty .
+dcterms:alternative rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/bibliographicCitation
-<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+dcterms:bibliographicCitation rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/contributor
-<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+dcterms:contributor rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/created
-<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+dcterms:created rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/creator
-<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+dcterms:creator rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/description
-<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+dcterms:description rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/hasFormat
-<http://purl.org/dc/terms/hasFormat> rdf:type owl:AnnotationProperty .
+dcterms:hasFormat rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/identifier
-<http://purl.org/dc/terms/identifier> rdf:type owl:AnnotationProperty .
+dcterms:identifier rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/issued
-<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+dcterms:issued rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+dcterms:license rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/modified
-<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+dcterms:modified rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/publisher
-<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+dcterms:publisher rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/source
-<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+dcterms:source rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+dcterms:title rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/ontology/bibo/doi
-<http://purl.org/ontology/bibo/doi> rdf:type owl:AnnotationProperty .
+bibo:doi rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
-<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
-<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
@@ -130,20 +135,209 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 
 ###  http://xmlns.com/foaf/0.1/homepage
-<http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
+foaf:homepage rdf:type owl:AnnotationProperty .
 
 
 ###  http://xmlns.com/foaf/0.1/name
-<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+foaf:name rdf:type owl:AnnotationProperty .
 
 
 ###  http://xmlns.com/foaf/0.1/page
-<http://xmlns.com/foaf/0.1/page> rdf:type owl:AnnotationProperty .
+foaf:page rdf:type owl:AnnotationProperty .
 
 
 #################################################################
 #    Classes
 #################################################################
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#AFMCalibrationProcess
+:AFMCalibrationProcess rdf:type owl:Class ;
+                       rdfs:subClassOf chameo:CalibrationProcess ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d ;
+                                         owl:someValuesFrom :AFMMeasurementProcess
+                                       ] ;
+                       skos:prefLabel "AFMCalibrationProcess" .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#AFMDataPostProcessing
+:AFMDataPostProcessing rdf:type owl:Class ;
+                       rdfs:subClassOf chameo:DataPostProcessing ;
+                       skos:prefLabel "AFMDataPostProcessing" .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#AFMMeasurementProcess
+:AFMMeasurementProcess rdf:type owl:Class ;
+                       rdfs:subClassOf chameo:AtomicForceMicroscopy ,
+                                       chameo:CharacterisationMeasurementProcess ;
+                       skos:prefLabel "AFMMeasurementProcess" .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#AFMRawDataConversion
+:AFMRawDataConversion rdf:type owl:Class ;
+                      rdfs:subClassOf chameo:DataPreparation ;
+                      skos:prefLabel "AFMRawDataConversion" .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#CutByScissors
+:CutByScissors rdf:type owl:Class ;
+               rdfs:subClassOf chameo:SampleExtractionByCutting ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty emmo:EMMO_499e24a5_5072_4c83_8625_fe3f96ae4a8d ;
+                                 owl:someValuesFrom :MountingOnHolder
+                               ] ;
+               skos:prefLabel "CutByScissors" .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#LTFN
+:LTFN rdf:type owl:Class ;
+      rdfs:subClassOf chameo:Laboratory ;
+      skos:prefLabel "LTFN" .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#LevellingForInclinations
+:LevellingForInclinations rdf:type owl:Class ;
+                          rdfs:subClassOf chameo:SampleInspection ;
+                          skos:prefLabel "LevellingForInclinations" .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#LevellingForOptimalPosition
+:LevellingForOptimalPosition rdf:type owl:Class ;
+                             rdfs:subClassOf chameo:SampleInspection ;
+                             skos:prefLabel "LevellingForOptimalPosition" .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#MountingOnHolder
+:MountingOnHolder rdf:type owl:Class ;
+                  rdfs:subClassOf chameo:Mounting ;
+                  skos:prefLabel "MountingOnHolder" .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#NanoindentationDataPostProcessing
+:NanoindentationDataPostProcessing rdf:type owl:Class ;
+                                   rdfs:subClassOf chameo:DataPostProcessing .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#NanoindentationRawDataConversion
+:NanoindentationRawDataConversion rdf:type owl:Class ;
+                                  rdfs:subClassOf chameo:DataPreparation .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#OPNNanoindentationCalibrationProcess
+:OPNNanoindentationCalibrationProcess rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/emmo/domain/nanoindentation#EMMO_b7264717-216e-46c6-9bf1-b17009a358c2> ;
+                                      skos:prefLabel "OPNNanoindentationCalibrationProcess" .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#OPNNanoindentationMeasurementProcess
+:OPNNanoindentationMeasurementProcess rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/emmo/domain/nanoindentation#EMMO_b3111cf6-107c-4aa6-8f3c-936348906200> ;
+                                      skos:prefLabel "OPNNanoindentationMeasurementProcess" .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#OrganicPhotovoltaicMaterial
+:OrganicPhotovoltaicMaterial rdf:type owl:Class ;
+                             rdfs:subClassOf chameo:Sample ;
+                             skos:prefLabel "OrganicPhotovoltaicMaterial" .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#OrganicPhotovoltaicNanolayersCharacterisationWorkflow
+:OrganicPhotovoltaicNanolayersCharacterisationWorkflow rdf:type owl:Class ;
+                                                       rdfs:subClassOf chameo:CharacterisationWorkflow ,
+                                                                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty chameo:hasCharacterisationTask ;
+                                                                                                owl:someValuesFrom :AFMCalibrationProcess
+                                                                                              ]
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty chameo:hasCharacterisationTask ;
+                                                                                                owl:someValuesFrom :AFMDataPostProcessing
+                                                                                              ]
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty chameo:hasCharacterisationTask ;
+                                                                                                owl:someValuesFrom :AFMMeasurementProcess
+                                                                                              ]
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty chameo:hasCharacterisationTask ;
+                                                                                                owl:someValuesFrom :AFMRawDataConversion
+                                                                                              ]
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty chameo:hasCharacterisationTask ;
+                                                                                                owl:someValuesFrom :CutByScissors
+                                                                                              ]
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty chameo:hasCharacterisationTask ;
+                                                                                                owl:someValuesFrom :LevellingForInclinations
+                                                                                              ]
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty chameo:hasCharacterisationTask ;
+                                                                                                owl:someValuesFrom :LevellingForOptimalPosition
+                                                                                              ]
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty chameo:hasCharacterisationTask ;
+                                                                                                owl:someValuesFrom :MountingOnHolder
+                                                                                              ]
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty chameo:hasCharacterisationTask ;
+                                                                                                owl:someValuesFrom :NanoindentationDataPostProcessing
+                                                                                              ]
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty chameo:hasCharacterisationTask ;
+                                                                                                owl:someValuesFrom :NanoindentationRawDataConversion
+                                                                                              ]
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty chameo:hasCharacterisationTask ;
+                                                                                                owl:someValuesFrom :OPNNanoindentationCalibrationProcess
+                                                                                              ]
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty chameo:hasCharacterisationTask ;
+                                                                                                owl:someValuesFrom :OPNNanoindentationMeasurementProcess
+                                                                                              ]
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty chameo:hasCharacterisationTask ;
+                                                                                                owl:someValuesFrom :SECalibration
+                                                                                              ]
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty chameo:hasCharacterisationTask ;
+                                                                                                owl:someValuesFrom :SEDataProcessingForHarmonic
+                                                                                              ]
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty chameo:hasCharacterisationTask ;
+                                                                                                owl:someValuesFrom :SEDataProcessingForOpticalAndStructure
+                                                                                              ]
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty chameo:hasCharacterisationTask ;
+                                                                                                owl:someValuesFrom :SEMeasurementProcess
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                       rdfs:comment "Organic Photovoltaics: Characterization, Performance, and Stability Assessment"@en ;
+                                                       skos:prefLabel "OrganicPhotovoltaicNanolayersCharacterisationWorkflow" ;
+                                                       emmo:EMMO_967080e5_2f42_4eb2_a3a9_c58143e835f9 "Mechanical and Optical Characterization of individual nanolayers followed by electrical performance stability after mechanical aging."@en .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#SECalibration
+:SECalibration rdf:type owl:Class ;
+               rdfs:subClassOf chameo:CalibrationProcess ;
+               skos:prefLabel "SECalibrationProcess" .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#SEDataProcessingForHarmonic
+:SEDataProcessingForHarmonic rdf:type owl:Class ;
+                             rdfs:subClassOf chameo:DataPostProcessing ;
+                             skos:prefLabel "SEDataProcessingForHarmonic" .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#SEDataProcessingForOpticalAndStructure
+:SEDataProcessingForOpticalAndStructure rdf:type owl:Class ;
+                                        rdfs:subClassOf chameo:DataPostProcessing ;
+                                        skos:prefLabel "SEDataProcessingForOpticalAndStructure" .
+
+
+###  https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#SEMeasurementProcess
+:SEMeasurementProcess rdf:type owl:Class ;
+                      rdfs:subClassOf chameo:CharacterisationMeasurementProcess ;
+                      skos:prefLabel "SEMeasurementProcess" .
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
