@@ -15,7 +15,7 @@
 @base <https://w3id.org/emmo/application/organic-photovoltaic-nanolayers#> .
 
 <https://w3id.org/emmo/application/organic-photovoltaic-nanolayers> rdf:type owl:Ontology ;
-                                                                     owl:imports <https://w3id.org/emmo/domain/nanoindentation> ;
+                                                                     owl:imports <https://w3id.org/emmo/domain/nanoindentation/1.0.0-beta1/nanoindentation> ;
                                                                      dcterms:abstract "Application ontology for Organic Photovoltaic Nanolayers testing developed within the NanoMECommons project."@en ;
                                                                      dcterms:alternative "OrPhoNano" ;
                                                                      dcterms:bibliographicCitation "Work under review - not available yet" ;
